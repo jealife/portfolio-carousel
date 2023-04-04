@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio Carousel</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://unpkg.com/tailwindcss@1.4.6/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+
+  <script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"></script>
+  <script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core/css/ionic.bundle.css" />
+  <style>
+    html,
+    body {
+      position: relative;
+      height: 100%;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: #eee;
+      font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+      font-size: 14px;
+      color: #000;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* 
+    .img-hero {
+      background-image: url(https://unsplash.it/1800);
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      width: 100%;
+    }
+    .img-hero div{
+      width: 100%;
+    } */
+
+    swiper-container {
+      width: 100%;
+      height: 100%;
+      background-color: #ffffff;
+    }
+
+    swiper-slide {
+
+      text-align: center;
+      font-size: 18px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    swiper-slide img {
+      display: block;
+      object-fit: cover;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- <header class="absolute top-0 w-full z-50">
+      <div class="h-16 w-full bg-black bg-opacity-50">
+        <div class="w-full h-full flex justify-center items-center">
+            <div
+                class="flex h-full items-center  hover:bg-black hover:bg-opacity-50">
+                <div class="mx-4 text-white"></div>
+                <div class=" h-8 w-px bg-gray-300"></div>
+            </div>
+            <div class="flex h-full items-center  hover:bg-black hover:bg-opacity-50 cursor-pointer" >
+                <div class="mx-4 text-white"><a href="#home">Home</a></div>
+                <div class=" h-8 w-px bg-gray-300"></div>
+            </div>
+            <div class="flex h-full items-center  hover:bg-black hover:bg-opacity-50">
+                <div class="mx-4 text-white"><a href="#work">Work</a></div>
+                <div class=" h-8 w-px bg-gray-300"></div>
+            </div>
+            <div class="flex h-full items-center  hover:bg-black hover:bg-opacity-50">
+                <div class="mx-4 text-white"><a href="#about">About</a></div>
+                <div class=" h-8 w-px bg-gray-300"></div>
+            </div>
+            <div class="flex h-full  items-center hover:bg-black hover:bg-opacity-50">
+                <div class="mx-4 text-white"><a href="#contact">Contact</a></div>
+            </div>
+        </div>
+    </div>
+    </header> -->
+  <swiper-container class="mySwiper swiper-h" pagination="false" pagination-clickable="true" space-between="0"
+    lazy="true" mousewheel="true" data-aos="zoom-in-up" data-aos-duration="500" loading="lazy">
+    <swiper-slide class="h-screen overflow-hidden flex items-center ">
+      <div class="flex flex-wrap md items-center h-screen">
+        <div class="bg-white w-full md:w-1/2 h-screen xl:pt- ">
+          <div class="mx-32 justify-center mt-12  flex items-center flex-col" data-aos-duration="1000"
+            data-aos-delay="50" data-aos-easing="ease-in-out" data-aos="fade-up"
+            data-aos-anchor-placement="center-center">
+            <img class="rounded-full xl:w-64 md:w-32 md\:-m-2 xl:mt-32" src="https://unsplash.it/500" alt="JEaLiFe">
+            <h1 class="text-6xl text-gray-800 font-bold mt-10 pr-4">JEaLiFe <br> Pictures</h1>
+
+            <div class="flex font-light text-gray-500 mt-3">
+              <div class="pr-4">
+                <span class="uppercase hover:text-red-300 duration-200"><a href="#pictures">Photos</a></span>
+              </div>
+              <div class="pr-4">
+                <span class="uppercase hover:text-red-300 duration-200"><a href="#websites">websites</a></span>
+              </div>
+              <div class="pr-4">
+                <span class="uppercase hover:text-red-300 duration-200"><a href="#design">Design</a></span>
+              </div>
+            </div>
+
+            <!-- description -->
+            <div class="description w-full sm: md:w-2/3 mt-2 text-gray-500 text-sm flex-wrap">
+              Le code est mon pinceau, l'écran mon canevas, Où je crée des sites web,
+              pour rendre le monde plus beau Chaque ligne de code est une pierre à l'édifice, Qui forme un tout
+              harmonieux,une expérience unique et bénéfique.
+            </div>
+          </div>
+        </div>
+        <div class=" w-full md:w-1/2 h-screen" data-aos-duration="1000" data-aos-delay="50"
+          data-aos-easing="ease-in-out" data-aos="fade-up">
+          <img src="https://unsplash.it/1500" class="h-screen w-full" alt="" />
+        </div>
+      </div>
+    </swiper-slide>
+    <swiper-slide id="work">
+      <swiper-container class="  " pagination="true" pagination-clickable="true" space-between="0" direction="vertical">
+        <swiper-slide class="bg-blue-400 bg-gradient-to-r from-cyan-500 to-blue-500 ">
+          <div class="block">
+            <h2 class="text-8xl font-bold shadow-light-900 text-white mb-52">
+              Portfolio
+            </h2>
+            <ion-button><ion-icon name="chevron-down-outline" aria-hidden="true">
+            </ion-button>
+          </div>
+          <ion-icon name=""></ion-icon>
+        </swiper-slide>
+        <swiper-slide
+          class="bg-blue-500 bg-gradient-to-r from-cyan-500 to-blue-500  text-center flex flex-col text-white"
+          id="pictures">
+
+          <h2 class="mx-auto text-5xl  font-semibold font-sans">My pictures</h2>
+          <div class="columns-3 p-5  gap-5 gap-x-2" >
+            <img class="w-96  aspect-square  rounded hover:shadow-light-100" alt="pictures"
+              src="https://unsplash.it/1500" />
+            <img class="w-96  aspect-video mt-5 rounded" alt="pictures" src="https://unsplash.it/1501" />
+            <img class="w-96  aspect-square mt-5 rounded" alt="pictures" src="https://unsplash.it/1440" />
+            <img class="w-96  aspect-video mt-5 rounded" alt="pictures" src="https://unsplash.it/1410" />
+            <img class="w-96  aspect-video mt-5 rounded" alt="pictures" src="https://unsplash.it/1420" />
+            <img class="w-96  aspect-square mt-5 rounded" alt="pictures" src="https://unsplash.it/1450" />
+            
+
+
+          </div>
+        </swiper-slide>
+        <swiper-slide class="bg-blue-600 grad bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500"
+          id="websites">
+
+          <section class=" p-96 min-h-screen flex md:flex-row items-center justify-around  flex-wrap sm:flex-col">
+
+            <div class="h-32 w-96 h-72 relative cursor-pointer mb-5 ml-4">
+              <div class="absolute inset-0 bg-white opacity-25 rounded-lg shadow-2xl"></div>
+              <div class="absolute inset-0 transform  hover:scale-75 transition duration-300">
+
+                <div class="h-full w-full bg-white rounded-lg shadow-2xl">
+                  <a href="https://portfolio-jea.vercel.app/">
+                    <img class="w-full h-full aspect-video ... rounded" alt="pictures" src="Portfolio.png 2.png" />
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="h-32 w-96 h-72 relative cursor-pointer mb-5 ml-4">
+              <div class="absolute inset-0 bg-white opacity-25 rounded-lg shadow-2xl"></div>
+              <div class="absolute inset-0 transform  hover:scale-75 transition duration-300">
+
+                <div class="h-full w-full bg-white rounded-lg shadow-2xl">
+                  <a href="https://portfolio-jealife.vercel.app/">
+                    <img class="w-full h-full aspect-video ... rounded" alt="pictures" src="Portfolio.png" />
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="h-32 w-96 h-72 relative cursor-pointer mb-5 ml-4">
+              <div class="absolute inset-0 bg-white opacity-25 rounded-lg shadow-2xl"></div>
+              <div class="absolute inset-0 transform  hover:scale-75 transition duration-300">
+
+                <div class="h-full w-full bg-white rounded-lg shadow-2xl">
+                  <a href="https://radius-ten.vercel.app/">
+                    <img class="w-full h-full aspect-video ... rounded" alt="pictures" src="radius.png" />
+                  </a>
+                </div>
+              </div>
+            </div>
+
+
+          </section>
+        </swiper-slide>
+        <!-- <swiper-slide class="bg-blue-700">Vertical Slide 4</swiper-slide> -->
+        <!-- <swiper-slide class="bg-blue-900">Vertical Slide 5</swiper-slide> -->
+      </swiper-container>
+    </swiper-slide>
+    <swiper-slide id="about">
+      <div class="columns-3 p-5  gap-5 gap-x-2 mx-auto mt-6">
+        <img class="w-96  aspect-square  rounded" alt="pictures"src="https://unsplash.it/1500" />
+        <img class="w-96  aspect-video mt-5 rounded" alt="pictures" src="https://unsplash.it/1501" />
+        <img class="w-96  aspect-square mt-5 rounded" alt="pictures" src="https://unsplash.it/1440" />
+        <img class="w-96  aspect-video mt-5 rounded" alt="pictures" src="https://unsplash.it/1410" />
+        <img class="w-96  aspect-video mt-5 rounded" alt="pictures" src="https://unsplash.it/1420" />
+        <img class="w-96  aspect-square mt-5 rounded" alt="pictures" src="https://unsplash.it/1450" />
+        
+
+
+      </div>
+    </swiper-slide>
+    <swiper-slide id="contact" class="block pt-32">
+      <h2 class="text-5xl text-gray-700">
+        Contact
+      </h2>
+      <div class="flex items-center justify-center p-5">
+        <!-- Author: FormBold Team -->
+        <!-- Learn More: https://formbold.com -->
+
+        <div class="mx-auto w-full max-w-[550px] text-left">
+
+          <form action="https://submit-form.com/Q6PX1HC6" method="POST">
+            <div class="mb-5">
+              <label for="name" class="mb-3 block text-base font-medium text-[#07074D]">
+                Full Name
+              </label>
+              <input type="text" name="name" id="name" placeholder="Full Name"
+                class="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md" />
+            </div>
+            <div class="mb-5">
+              <label for="email" class="mb-3 block text-base font-medium text-[#07074D]">
+                Email Address
+              </label>
+              <input type="email" name="email" id="email" placeholder="example@domain.com"
+                class="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md" />
+            </div>
+            <div class="mb-5">
+              <label for="subject" class="mb-3 block text-base font-medium text-[#07074D]">
+                Subject
+              </label>
+              <input type="text" name="subject" id="subject" placeholder="Enter your subject"
+                class="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md" />
+            </div>
+            <div class="mb-5">
+              <label for="message" class="mb-3 block text-base font-medium text-[#07074D]">
+                Message
+              </label>
+              <textarea rows="4" name="message" id="message" placeholder="Type your message"
+                class="w-full resize-none rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"></textarea>
+            </div>
+            <div>
+              <button
+                class="hover:shadow-indigo-500 rounded-md bg-[#6A64F1] py-3 px-8 text-base font-semibold text-white outline-none">
+                Submit
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </swiper-slide>
+  </swiper-container>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-element-bundle.min.js"></script>
+  <script>
+    AOS.init();
+  </script>
+</body>
+
+</html>
