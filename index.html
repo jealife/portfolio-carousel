@@ -47,7 +47,7 @@
 
     swiper-container {
       width: 100%;
-      height: 100vh;
+      height: 100%;
       background-color: #ffffff;
     }
 
@@ -95,7 +95,7 @@
     </div>
     </header> -->
   <swiper-container class="mySwiper swiper-h" pagination="false" pagination-clickable="true" space-between="0"
-    lazy="true" direction="vertical" mousewheel="true" data-aos="zoom-in-up" data-aos-duration="500" loading="lazy">
+    lazy="true" direction="horizontal" mousewheel="true" data-aos="zoom-in-up" data-aos-duration="500" loading="lazy">
     <swiper-slide class="h-screen overflow-hidden flex items-center ">
       <div class="flex flex-wrap md items-center h-screen">
         <div class="bg-white w-full md:w-1/2 h-screen xl:pt- ">
@@ -132,7 +132,7 @@
       </div>
     </swiper-slide>
     <swiper-slide id="work">
-      <swiper-container class="  " pagination="true" pagination-clickable="true" space-between="0" direction="horizontal">
+      <swiper-container class="  " pagination="true" pagination-clickable="true" space-between="0" direction="vertical">
         <swiper-slide class="bg-blue-400 bg-gradient-to-r from-cyan-500 to-blue-500 ">
           <div class="block">
             <h2 class="text-8xl font-bold shadow-light-900 text-white mb-52">
@@ -221,11 +221,8 @@
 
       </div>
     </swiper-slide>
-    <swiper-slide id="contact" class="block pt-32">
-      contact
-    </swiper-slide>
-  </swiper-container>
-  <h2 class="text-5xl text-gray-700">
+    <swiper-slide id="contact" class="block pt-5">
+      <h2 class="text-5xl text-gray-700">
         Contact
       </h2>
       <div class="flex items-center justify-center p-5">
@@ -272,6 +269,9 @@
           </form>
         </div>
       </div>
+    </swiper-slide>
+  </swiper-container>
+  
 
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-element-bundle.min.js"></script>
